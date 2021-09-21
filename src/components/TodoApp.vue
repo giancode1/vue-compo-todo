@@ -21,7 +21,7 @@ export default {
         //     console.log(todos.value)
         // })
 
-        console.log('me genere TodoApp')
+        //console.log('me genere TodoApp')
         return{
 
         }
