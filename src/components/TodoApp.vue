@@ -16,15 +16,15 @@ export default {
         const todos = ref([])
         provide('todos', todos)
 
-        // watchEffect(()=>{
-        //     console.log(todos.value.length)
-        //     console.log(todos.value)
-        // })
-
-        //console.log('me genere TodoApp')
-        return{
-
+        if(localStorage.getItem('todos')){
+          todos.value = JSON.parse(localStorage.getItem('todos'))
         }
+        
+        watchEffect(()=>{
+          //console.log(todos.value)
+          localStorage.setItem('todos', JSON.stringify(todos.value))
+        })
+
     }
 }
 </script>

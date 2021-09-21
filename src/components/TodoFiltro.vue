@@ -15,10 +15,10 @@ export default {
     setup(){
         const selection = inject('selection')
 
-        watchEffect(()=>{
-            console.log('selection.value',selection.value)
+        // watchEffect(()=>{
+        //     console.log('selection.value',selection.value)
 
-        })
+        // })
 
         return{
             selection
